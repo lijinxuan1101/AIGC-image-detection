@@ -1,0 +1,9 @@
+split,condition,ai,real
+calib_src,original,1499,1473
+closed_test,original,7800,7793
+closed_test,transfer,7800,7793
+excluded_overlap_with_test,original,1,27
+explore,original,200,203
+explore,transfer,200,203
+target_dev,original,500,504
+target_dev,transfer,500,504

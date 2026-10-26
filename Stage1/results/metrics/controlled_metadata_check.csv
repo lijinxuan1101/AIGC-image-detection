@@ -1,0 +1,7 @@
+set,condition,n_real,n_ai,metadata_only_AUROC
+unmatched_JPEG原图,original,8478,840,0.9993671294892101
+unmatched_JPEG原图,transfer,8478,840,0.9888709854076096
+strict(尺寸×压缩强度),original,727,727,0.9996329435092491
+strict(尺寸×压缩强度),transfer,727,727,0.9904205824089123
+loose(仅尺寸),original,812,812,0.999993933364071
+loose(仅尺寸),transfer,812,812,0.9892112463296853

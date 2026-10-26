@@ -1,0 +1,34 @@
+# ---- 数据、权重、环境、日志：不入库 ----
+data/
+weights/
+logs/
+.venv/
+__pycache__/
+*.pyc
+
+# ---- 任何模型权重/大二进制：不入库（含基线仓库自带的权重）----
+*.pth
+*.pt
+*.pth.tar
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.h5
+*.pkl
+*.zip
+*.tar
+*.tar.gz
+**/weights/
+
+# ---- 基线仓库：只保留代码，不带图片/动图/矢量图等资源 ----
+code/baselines/**/*.png
+code/baselines/**/*.jpg
+code/baselines/**/*.jpeg
+code/baselines/**/*.gif
+code/baselines/**/*.svg
+code/baselines/**/*.ipynb
+
+# ---- 审计里生成的示例图仍保留 ----
+!results/audit/*.png
+!results/figures/*.png

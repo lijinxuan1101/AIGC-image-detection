@@ -1,0 +1,22 @@
+{
+  "version": "v1",
+  "date": "2026-10-26",
+  "seed": 20261026,
+  "near_dist": 16,
+  "n_explore": {
+    "0": 200,
+    "1": 200
+  },
+  "n_target_dev": {
+    "0": 500,
+    "1": 500
+  },
+  "manifest_sha256": "52f4ec236b4d4f605008bb0cc432109ee6e2e0a96466cf566b3491f23c66c5c8",
+  "rules": [
+    "同源图所有版本同划分",
+    "同重复组同划分",
+    "closed_test 不得用于方法/阈值/模型选择",
+    "阈值只在 calib_src（原图）上选定并锁定；目标域校准仅用 target_dev 并单独列报",
+    "redigital 不纳入 Stage 1"
+  ]
+}
