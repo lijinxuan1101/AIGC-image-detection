@@ -1,0 +1,88 @@
+Loading weights:   0%|          | 0/208 [00:00<?, ?it/s]Loading weights: 100%|██████████| 208/208 [00:00<00:00, 5922.75it/s]
+[transformers] [1mSiglipVisionModel LOAD REPORT[0m from: /root/AIGC-image-detection/Stage2/weights/siglip2-base-patch16-256
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+logit_bias                                                   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.head.bias                                         | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+text_model.head.weight                                       | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/195 [00:00<?, ?it/s]Loading weights: 100%|██████████| 195/195 [00:00<00:00, 6034.70it/s]
+加载初始化参数 2 未匹配 []
+可训练参数 31.07M，张量 359；示例 ['vis.base_model.model.encoder.layers.0.self_attn.k_proj.lora_A.default.weight', 'vis.base_model.model.encoder.layers.0.self_attn.k_proj.lora_B.default.weight', 'vis.base_model.model.encoder.layers.0.self_attn.v_proj.lora_A.default.weight']
+有效 batch=32 对（64 视图），步数=200，曝光 6400 个样本对，约 2.22 个 epoch
+/root/AIGC-image-detection/Stage2/code/train.py:136: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  rec["lib_alpha"] = float(torch.sigmoid(model.lib.beta))
+{"step": 1, "loss": 0.09067917196080089, "acc": 0.96875, "sem": 0.0, "gnorm": 27.52299690246582, "lr_new": 1e-05, "mem_gb": 11.761287168, "elapsed": 10.179566621780396, "lib_alpha": 0.49999749660491943}
+{"step": 10, "loss": 0.19083751500584184, "acc": 0.8203125, "sem": 0.0, "gnorm": 40.85985565185547, "lr_new": 0.0001, "mem_gb": 12.010144768, "elapsed": 94.4123387336731, "lib_alpha": 0.4999508261680603}
+{"step": 20, "loss": 0.15527940574102103, "acc": 0.934375, "sem": 0.0, "gnorm": 26.46222496032715, "lr_new": 9.944739353007344e-05, "mem_gb": 12.010144768, "elapsed": 188.04130744934082, "lib_alpha": 0.4998168349266052}
+{"step": 30, "loss": 0.14557651815703138, "acc": 0.934375, "sem": 0.0, "gnorm": 35.20344924926758, "lr_new": 9.755282581475769e-05, "mem_gb": 12.010144768, "elapsed": 281.7034466266632, "lib_alpha": 0.499724417924881}
+{"step": 40, "loss": 0.17795833756099455, "acc": 0.921875, "sem": 0.0, "gnorm": 32.600555419921875, "lr_new": 9.43611409721806e-05, "mem_gb": 12.010144768, "elapsed": 375.382253408432, "lib_alpha": 0.49963071942329407}
+{"step": 50, "loss": 0.17762478200020268, "acc": 0.9296875, "sem": 0.0, "gnorm": 32.704715728759766, "lr_new": 8.995939984474624e-05, "mem_gb": 12.010144768, "elapsed": 469.3702292442322, "lib_alpha": 0.49960970878601074}
+[eval step 50] macro AUROC=0.9981  orig=0.999 transfer=0.996 q75=0.999 q40=0.999
+{"step": 60, "loss": 0.15080234609777107, "acc": 0.9375, "sem": 0.0, "gnorm": 17.31363296508789, "lr_new": 8.44676704559283e-05, "mem_gb": 12.010144768, "elapsed": 590.4273021221161, "lib_alpha": 0.49960851669311523}
+{"step": 70, "loss": 0.17515278834616765, "acc": 0.9359375, "sem": 0.0, "gnorm": 30.087636947631836, "lr_new": 7.803575286758364e-05, "mem_gb": 12.010144768, "elapsed": 684.4238345623016, "lib_alpha": 0.49954158067703247}
+{"step": 80, "loss": 0.15652789629530162, "acc": 0.9359375, "sem": 0.0, "gnorm": 26.904054641723633, "lr_new": 7.083909302476453e-05, "mem_gb": 12.010144768, "elapsed": 778.1477794647217, "lib_alpha": 0.49951428174972534}
+{"step": 90, "loss": 0.18041741054039448, "acc": 0.934375, "sem": 0.0, "gnorm": 21.005502700805664, "lr_new": 6.307399704769099e-05, "mem_gb": 12.010144768, "elapsed": 872.0157074928284, "lib_alpha": 0.4994712173938751}
+{"step": 100, "loss": 0.06228214839939028, "acc": 0.98125, "sem": 0.0, "gnorm": 16.30556297302246, "lr_new": 5.4952276512523136e-05, "mem_gb": 12.010144768, "elapsed": 965.9248714447021, "lib_alpha": 0.49943113327026367}
+[eval step 100] macro AUROC=1.0000  orig=1.000 transfer=1.000 q75=1.000 q40=1.000
+{"step": 110, "loss": 0.06679305248253513, "acc": 0.9703125, "sem": 0.0, "gnorm": 0.711773693561554, "lr_new": 4.6695470783715024e-05, "mem_gb": 12.010144768, "elapsed": 1086.9215314388275, "lib_alpha": 0.4994175136089325}
+{"step": 120, "loss": 0.07377466786565492, "acc": 0.971875, "sem": 0.0, "gnorm": 9.70989990234375, "lr_new": 3.852880399766244e-05, "mem_gb": 12.010144768, "elapsed": 1180.6936104297638, "lib_alpha": 0.4994078278541565}
+{"step": 130, "loss": 0.12736728446761844, "acc": 0.9625, "sem": 0.0, "gnorm": 25.22599220275879, "lr_new": 3.067504153537739e-05, "mem_gb": 12.010144768, "elapsed": 1274.3439621925354, "lib_alpha": 0.4993927776813507}
+{"step": 140, "loss": 0.10854245737573365, "acc": 0.9671875, "sem": 0.0, "gnorm": 23.583242416381836, "lr_new": 2.3348413563600325e-05, "mem_gb": 12.010144768, "elapsed": 1368.0536468029022, "lib_alpha": 0.49938884377479553}
+{"step": 150, "loss": 0.051283184285421154, "acc": 0.978125, "sem": 0.0, "gnorm": 1.8227765560150146, "lr_new": 1.6748771394307598e-05, "mem_gb": 12.010144768, "elapsed": 1461.787178993225, "lib_alpha": 0.4993853271007538}
+[eval step 150] macro AUROC=0.9992  orig=1.000 transfer=0.997 q75=1.000 q40=1.000
+{"step": 160, "loss": 0.054992031035362744, "acc": 0.9828125, "sem": 0.0, "gnorm": 12.614923477172852, "lr_new": 1.1056136061894384e-05, "mem_gb": 12.010144768, "elapsed": 1582.623794078827, "lib_alpha": 0.4993855059146881}
+{"step": 170, "loss": 0.01839020379993599, "acc": 0.9921875, "sem": 0.0, "gnorm": 1.942626714706421, "lr_new": 6.425787818636142e-06, "mem_gb": 12.010144768, "elapsed": 1676.163625717163, "lib_alpha": 0.4993850290775299}
+{"step": 180, "loss": 0.07091851493532886, "acc": 0.96875, "sem": 0.0, "gnorm": 17.04754638671875, "lr_new": 2.9840304941919415e-06, "mem_gb": 12.010144768, "elapsed": 1769.6798317432404, "lib_alpha": 0.4993831515312195}
+{"step": 190, "loss": 0.06716447595172212, "acc": 0.9765625, "sem": 0.0, "gnorm": 22.594730377197266, "lr_new": 8.247462563808817e-07, "mem_gb": 12.010144768, "elapsed": 1863.405843257904, "lib_alpha": 0.49938255548477173}
+{"step": 200, "loss": 0.0066442031988117375, "acc": 1.0, "sem": 0.0, "gnorm": 0.5951488018035889, "lr_new": 6.834750376549792e-09, "mem_gb": 12.010144768, "elapsed": 1957.268387556076, "lib_alpha": 0.4993824362754822}
+[eval final step 200] macro AUROC=0.9997
+  predict 0/2015  1s
+  predict 640/2015  31s
+  predict 1280/2015  60s
+  predict 1920/2015  89s
+[final explore] macro AUROC=0.9911
+  condition  n_real  n_fake  auroc     ap  tpr_at_1fpr  tpr_at_5fpr  thr    tpr    fpr   bacc     f1
+0      orig     203     200  0.988  0.990        0.805        0.940  0.0  0.955  0.064  0.945  0.946
+1  transfer     203     200  0.990  0.991        0.875        0.975  0.0  0.975  0.054  0.960  0.961
+2       q75     203     200  0.993  0.995        0.950        0.985  0.0  0.985  0.059  0.963  0.963
+3       q40     203     200  0.994  0.996        0.960        0.985  0.0  0.985  0.049  0.968  0.968
+  predict 0/5020  1s
+  predict 640/5020  31s
+  predict 1280/5020  60s
+  predict 1920/5020  89s
+  predict 2560/5020  118s
+  predict 3200/5020  147s
+  predict 3840/5020  176s
+  predict 4480/5020  205s
+[final target_dev] macro AUROC=0.9933
+  condition  n_real  n_fake  auroc     ap  tpr_at_1fpr  tpr_at_5fpr  thr    tpr    fpr   bacc     f1
+0      orig     504     500  0.989  0.991        0.898        0.934  0.0  0.938  0.052  0.943  0.943
+1  transfer     504     500  0.993  0.994        0.892        0.966  0.0  0.964  0.042  0.961  0.961
+2       q75     504     500  0.996  0.996        0.936        0.988  0.0  0.980  0.040  0.970  0.970
+3       q40     504     500  0.995  0.995        0.914        0.980  0.0  0.972  0.030  0.971  0.971

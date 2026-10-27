@@ -1,0 +1,55 @@
+{
+ "lib_shape_ok": true,
+ "lib_alpha0": 0.5,
+ "lib_kernel_sum": 0.9999999403953552,
+ "lib_no_trainable_kernel": true,
+ "gsr_r1_min_valid_keys": 247,
+ "gsr_r1_max_valid_keys": 252,
+ "gsr_r1_identity_at_init": true,
+ "gsr_r1_finite": true,
+ "gsr_r1_neighbor_blocked": true,
+ "gsr_r2_min_valid_keys": 231,
+ "gsr_r2_max_valid_keys": 247,
+ "gsr_r2_identity_at_init": true,
+ "gsr_r2_finite": true,
+ "gsr_r2_neighbor_blocked": true,
+ "gsr_r3_min_valid_keys": 207,
+ "gsr_r3_max_valid_keys": 240,
+ "gsr_r3_identity_at_init": true,
+ "gsr_r3_finite": true,
+ "gsr_r3_neighbor_blocked": true,
+ "answer_Yes_extra_tokens": 1,
+ "answer_Yes_prefix_unchanged": true,
+ "answer_Yes_token": [
+  "▁Yes"
+ ],
+ "answer_No_extra_tokens": 1,
+ "answer_No_prefix_unchanged": true,
+ "answer_No_token": [
+  "▁No"
+ ],
+ "yes_id": 3869,
+ "no_id": 1939,
+ "logit_finite": true,
+ "trainable_tensors": [
+  "proj.weight",
+  "proj.bias"
+ ],
+ "proj_grad_norm": 4361.0908203125,
+ "frozen_with_grad": [],
+ "n_frozen_params_M": 3914.0,
+ "n_trainable_params_M": 2.362,
+ "visual_token_rms": 0.06606148183345795,
+ "text_embedding_rms": 0.0372469499707222,
+ "pad_invariance_abs_diff": 0.20843124389648438,
+ "logit_scale_example": [
+  0.311,
+  0.717,
+  -0.006,
+  -1.062
+ ],
+ "direction_logit_equals_zNo_minus_zYes": true,
+ "peak_mem_gb": 8.289632768,
+ "pad_invariance_fp32_abs_diff": 3.814697265625e-06,
+ "fp32_logit_example": 0.4590301513671875
+}

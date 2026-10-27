@@ -1,0 +1,85 @@
+Loading weights:   0%|          | 0/208 [00:00<?, ?it/s]Loading weights: 100%|██████████| 208/208 [00:00<00:00, 6516.49it/s]
+[transformers] [1mSiglipVisionModel LOAD REPORT[0m from: /root/AIGC-image-detection/Stage2/weights/siglip2-base-patch16-256
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.head.bias                                         | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+text_model.head.weight                                       | UNEXPECTED |  | 
+logit_bias                                                   | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/195 [00:00<?, ?it/s]Loading weights: 100%|██████████| 195/195 [00:00<00:00, 6647.94it/s]
+加载初始化参数 2 未匹配 []
+可训练参数 31.07M，张量 358；示例 ['vis.base_model.model.encoder.layers.0.self_attn.k_proj.lora_A.default.weight', 'vis.base_model.model.encoder.layers.0.self_attn.k_proj.lora_B.default.weight', 'vis.base_model.model.encoder.layers.0.self_attn.v_proj.lora_A.default.weight']
+有效 batch=32 对（64 视图），步数=200，曝光 6400 个样本对，约 2.22 个 epoch
+{"step": 1, "loss": 0.008632895420305431, "acc": 1.0, "sem": 0.0, "gnorm": 3.287867784500122, "lr_new": 1e-05, "mem_gb": 12.00544256, "elapsed": 11.422539710998535}
+{"step": 10, "loss": 0.14039231057977303, "acc": 0.8546875, "sem": 0.0, "gnorm": 50.52375030517578, "lr_new": 0.0001, "mem_gb": 12.290390528, "elapsed": 106.8674910068512}
+{"step": 20, "loss": 0.14995971117168666, "acc": 0.94375, "sem": 0.0, "gnorm": 65.144775390625, "lr_new": 9.944739353007344e-05, "mem_gb": 12.290390528, "elapsed": 212.46882510185242}
+{"step": 30, "loss": 0.09888654462993145, "acc": 0.9578125, "sem": 0.0, "gnorm": 26.04244041442871, "lr_new": 9.755282581475769e-05, "mem_gb": 12.301804544, "elapsed": 318.14359760284424}
+{"step": 40, "loss": 0.15443402166711168, "acc": 0.9359375, "sem": 0.0, "gnorm": 26.997812271118164, "lr_new": 9.43611409721806e-05, "mem_gb": 12.404130304, "elapsed": 424.5789866447449}
+{"step": 50, "loss": 0.16678116065450013, "acc": 0.9328125, "sem": 0.0, "gnorm": 26.011056900024414, "lr_new": 8.995939984474624e-05, "mem_gb": 12.404130304, "elapsed": 531.4955914020538}
+[eval step 50] macro AUROC=0.9986  orig=0.998 transfer=0.998 q75=0.999 q40=0.999
+{"step": 60, "loss": 0.11300134211778641, "acc": 0.9515625, "sem": 0.0, "gnorm": 12.360516548156738, "lr_new": 8.44676704559283e-05, "mem_gb": 12.404130304, "elapsed": 669.3575148582458}
+{"step": 70, "loss": 0.13659693775698542, "acc": 0.9375, "sem": 0.0, "gnorm": 35.63494873046875, "lr_new": 7.803575286758364e-05, "mem_gb": 12.404130304, "elapsed": 775.1462996006012}
+{"step": 80, "loss": 0.1351716076489538, "acc": 0.95, "sem": 0.0, "gnorm": 20.746253967285156, "lr_new": 7.083909302476453e-05, "mem_gb": 12.404130304, "elapsed": 881.3868718147278}
+{"step": 90, "loss": 0.1326990609639324, "acc": 0.9546875, "sem": 0.0, "gnorm": 14.35964584350586, "lr_new": 6.307399704769099e-05, "mem_gb": 12.404130304, "elapsed": 987.9103426933289}
+{"step": 100, "loss": 0.0535715617967071, "acc": 0.975, "sem": 0.0, "gnorm": 65.15801239013672, "lr_new": 5.4952276512523136e-05, "mem_gb": 12.404130304, "elapsed": 1093.8310067653656}
+[eval step 100] macro AUROC=1.0000  orig=1.000 transfer=1.000 q75=1.000 q40=1.000
+{"step": 110, "loss": 0.06453810566599713, "acc": 0.9734375, "sem": 0.0, "gnorm": 6.066720962524414, "lr_new": 4.6695470783715024e-05, "mem_gb": 12.404130304, "elapsed": 1231.8364992141724}
+{"step": 120, "loss": 0.04166575989220291, "acc": 0.984375, "sem": 0.0, "gnorm": 15.125219345092773, "lr_new": 3.852880399766244e-05, "mem_gb": 12.404130304, "elapsed": 1338.2215270996094}
+{"step": 130, "loss": 0.05852142573785386, "acc": 0.9796875, "sem": 0.0, "gnorm": 8.623945236206055, "lr_new": 3.067504153537739e-05, "mem_gb": 12.404130304, "elapsed": 1444.5387649536133}
+{"step": 140, "loss": 0.06655552990996512, "acc": 0.975, "sem": 0.0, "gnorm": 21.26755714416504, "lr_new": 2.3348413563600325e-05, "mem_gb": 12.404130304, "elapsed": 1550.6797275543213}
+{"step": 150, "loss": 0.06440368826006307, "acc": 0.978125, "sem": 0.0, "gnorm": 0.42305439710617065, "lr_new": 1.6748771394307598e-05, "mem_gb": 12.404130304, "elapsed": 1657.5471904277802}
+[eval step 150] macro AUROC=0.9998  orig=1.000 transfer=1.000 q75=1.000 q40=1.000
+{"step": 160, "loss": 0.06691133725544204, "acc": 0.975, "sem": 0.0, "gnorm": 14.90739917755127, "lr_new": 1.1056136061894384e-05, "mem_gb": 12.404130304, "elapsed": 1795.0793352127075}
+{"step": 170, "loss": 0.01937181385437725, "acc": 0.99375, "sem": 0.0, "gnorm": 15.56718635559082, "lr_new": 6.425787818636142e-06, "mem_gb": 12.404130304, "elapsed": 1902.1418414115906}
+{"step": 180, "loss": 0.04621657997631701, "acc": 0.98125, "sem": 0.0, "gnorm": 5.19470739364624, "lr_new": 2.9840304941919415e-06, "mem_gb": 12.404130304, "elapsed": 2008.3317251205444}
+{"step": 190, "loss": 0.038992901406163585, "acc": 0.9859375, "sem": 0.0, "gnorm": 2.705092668533325, "lr_new": 8.247462563808817e-07, "mem_gb": 12.404130304, "elapsed": 2115.431659221649}
+{"step": 200, "loss": 0.009297738367604325, "acc": 0.9984375, "sem": 0.0, "gnorm": 0.7980567812919617, "lr_new": 6.834750376549792e-09, "mem_gb": 12.404130304, "elapsed": 2221.915002346039}
+[eval final step 200] macro AUROC=0.9998
+  predict 0/2015  2s
+  predict 640/2015  35s
+  predict 1280/2015  68s
+  predict 1920/2015  100s
+[final explore] macro AUROC=0.9959
+  condition  n_real  n_fake  auroc     ap  tpr_at_1fpr  tpr_at_5fpr  thr    tpr    fpr   bacc     f1
+0      orig     203     200  0.993  0.994        0.895        0.955  0.0  0.960  0.054  0.953  0.953
+1  transfer     203     200  0.997  0.997        0.915        0.985  0.0  0.985  0.039  0.973  0.973
+2       q75     203     200  0.997  0.997        0.960        0.985  0.0  0.985  0.044  0.970  0.970
+3       q40     203     200  0.997  0.997        0.915        0.995  0.0  0.985  0.034  0.975  0.975
+  predict 0/5020  2s
+  predict 640/5020  35s
+  predict 1280/5020  68s
+  predict 1920/5020  100s
+  predict 2560/5020  133s
+  predict 3200/5020  166s
+  predict 3840/5020  198s
+  predict 4480/5020  231s
+[final target_dev] macro AUROC=0.9936
+  condition  n_real  n_fake  auroc     ap  tpr_at_1fpr  tpr_at_5fpr  thr    tpr    fpr   bacc     f1
+0      orig     504     500  0.989  0.991        0.882        0.952  0.0  0.936  0.042  0.947  0.946
+1  transfer     504     500  0.994  0.995        0.938        0.970  0.0  0.960  0.042  0.959  0.959
+2       q75     504     500  0.996  0.997        0.950        0.990  0.0  0.976  0.036  0.970  0.970
+3       q40     504     500  0.995  0.996        0.942        0.976  0.0  0.966  0.032  0.967  0.967

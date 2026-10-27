@@ -1,0 +1,18 @@
+# 预训练权重与训练得到的 checkpoint
+weights/
+*.pt
+*.pth
+*.pth.tar
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+
+# 像素缓存与图片数据：单文件或总体积超过 GitHub 限制
+*.npy
+data/**/*.jpg
+data/**/*.jpeg
+data/**/*.png
+
+__pycache__/
+*.pyc

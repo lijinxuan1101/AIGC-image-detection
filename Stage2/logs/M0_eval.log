@@ -1,0 +1,68 @@
+Loading weights:   0%|          | 0/208 [00:00<?, ?it/s]Loading weights: 100%|██████████| 208/208 [00:00<00:00, 5724.70it/s]
+[transformers] [1mSiglipVisionModel LOAD REPORT[0m from: /root/AIGC-image-detection/Stage2/weights/siglip2-base-patch16-256
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+logit_bias                                                   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.head.weight                                       | UNEXPECTED |  | 
+text_model.head.bias                                         | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/195 [00:00<?, ?it/s]Loading weights: 100%|██████████| 195/195 [00:00<00:00, 8446.91it/s]
+  predict 0/2015  1s
+  predict 320/2015  18s
+  predict 640/2015  34s
+  predict 960/2015  50s
+  predict 1280/2015  66s
+  predict 1600/2015  81s
+  predict 1920/2015  97s
+[M0 explore] macro AUROC=0.9934
+  condition  n_real  n_fake  auroc     ap  tpr_at_1fpr  tpr_at_5fpr  thr    tpr    fpr   bacc     f1
+0      orig     203     200  0.989  0.991         0.82        0.965  0.0  0.965  0.054  0.955  0.955
+1  transfer     203     200  0.994  0.995         0.86        0.980  0.0  0.980  0.059  0.960  0.961
+2       q75     203     200  0.995  0.996         0.92        0.985  0.0  0.985  0.039  0.973  0.973
+3       q40     203     200  0.995  0.996         0.94        0.990  0.0  0.990  0.039  0.975  0.975
+  predict 0/5020  1s
+  predict 320/5020  17s
+  predict 640/5020  33s
+  predict 960/5020  49s
+  predict 1280/5020  65s
+  predict 1600/5020  81s
+  predict 1920/5020  96s
+  predict 2240/5020  112s
+  predict 2560/5020  128s
+  predict 2880/5020  144s
+  predict 3200/5020  160s
+  predict 3520/5020  176s
+  predict 3840/5020  191s
+  predict 4160/5020  207s
+  predict 4480/5020  223s
+  predict 4800/5020  239s
+[M0 target_dev] macro AUROC=0.9931
+  condition  n_real  n_fake  auroc     ap  tpr_at_1fpr  tpr_at_5fpr  thr    tpr    fpr   bacc     f1
+0      orig     504     500  0.988  0.991        0.874        0.954  0.0  0.954  0.050  0.952  0.952
+1  transfer     504     500  0.993  0.994        0.888        0.966  0.0  0.966  0.052  0.957  0.957
+2       q75     504     500  0.996  0.996        0.930        0.978  0.0  0.986  0.052  0.967  0.968
+3       q40     504     500  0.995  0.995        0.924        0.986  0.0  0.978  0.040  0.969  0.969

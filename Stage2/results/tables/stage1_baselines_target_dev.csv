@@ -1,0 +1,7 @@
+model,condition,auroc,n
+stage1_clip,orig,0.8171269841269841,1004
+stage1_clip,transfer,0.7228095238095237,1004
+stage1_bfree,orig,0.8857261904761904,1004
+stage1_bfree,transfer,0.7605039682539683,1004
+stage1_npr,orig,0.8425952380952381,1004
+stage1_npr,transfer,0.5621349206349207,1004

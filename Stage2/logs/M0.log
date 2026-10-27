@@ -1,0 +1,204 @@
+Loading weights:   0%|          | 0/208 [00:00<?, ?it/s]Loading weights: 100%|██████████| 208/208 [00:00<00:00, 2457.51it/s]
+[transformers] [1mSiglipVisionModel LOAD REPORT[0m from: /root/AIGC-image-detection/Stage2/weights/siglip2-base-patch16-256
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+logit_bias                                                   | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+text_model.head.weight                                       | UNEXPECTED |  | 
+text_model.head.bias                                         | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/195 [00:00<?, ?it/s]Loading weights: 100%|██████████| 195/195 [00:00<00:00, 5062.79it/s]
+加载初始化参数 2 未匹配 []
+可训练参数 28.71M，张量 354；示例 ['vis.base_model.model.encoder.layers.0.self_attn.k_proj.lora_A.default.weight', 'vis.base_model.model.encoder.layers.0.self_attn.k_proj.lora_B.default.weight', 'vis.base_model.model.encoder.layers.0.self_attn.v_proj.lora_A.default.weight']
+有效 batch=16 对（32 视图），步数=200，曝光 3200 个样本对，约 1.11 个 epoch
+{"step": 1, "loss": 0.008632895420305431, "acc": 1.0, "sem": 0.0, "gnorm": 3.282290458679199, "lr_new": 1e-05, "mem_gb": 11.920812032, "elapsed": 11.622149229049683}
+{"step": 10, "loss": 0.1423237343551591, "acc": 0.846875, "sem": 0.0, "gnorm": 62.02627182006836, "lr_new": 0.0001, "mem_gb": 12.18900736, "elapsed": 107.5756847858429}
+{"step": 20, "loss": 0.15185835587326438, "acc": 0.940625, "sem": 0.0, "gnorm": 40.52907943725586, "lr_new": 9.944739353007344e-05, "mem_gb": 12.18900736, "elapsed": 218.8591148853302}
+{"step": 30, "loss": 0.10414186085108668, "acc": 0.959375, "sem": 0.0, "gnorm": 20.45709991455078, "lr_new": 9.755282581475769e-05, "mem_gb": 12.200628224, "elapsed": 324.795382976532}
+{"step": 40, "loss": 0.13190875097789104, "acc": 0.95, "sem": 0.0, "gnorm": 44.54184341430664, "lr_new": 9.43611409721806e-05, "mem_gb": 12.303581696, "elapsed": 431.4353756904602}
+{"step": 50, "loss": 0.15767798350025258, "acc": 0.940625, "sem": 0.0, "gnorm": 44.52847671508789, "lr_new": 8.995939984474624e-05, "mem_gb": 12.303581696, "elapsed": 538.7409346103668}
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+[eval step 50] macro AUROC=nan  orig=nan transfer=nan q75=nan q40=nan
+{"step": 60, "loss": 0.14354544645175338, "acc": 0.959375, "sem": 0.0, "gnorm": 11.899868965148926, "lr_new": 8.44676704559283e-05, "mem_gb": 12.303581696, "elapsed": 676.6805896759033}
+{"step": 70, "loss": 0.15820022340631112, "acc": 0.9359375, "sem": 0.0, "gnorm": 24.35215187072754, "lr_new": 7.803575286758364e-05, "mem_gb": 12.303581696, "elapsed": 782.7414557933807}
+{"step": 80, "loss": 0.2130608786130324, "acc": 0.9234375, "sem": 0.0, "gnorm": 47.28548049926758, "lr_new": 7.083909302476453e-05, "mem_gb": 12.303581696, "elapsed": 889.3116357326508}
+{"step": 90, "loss": 0.2024186909198761, "acc": 0.928125, "sem": 0.0, "gnorm": 23.941572189331055, "lr_new": 6.307399704769099e-05, "mem_gb": 12.303581696, "elapsed": 996.0072999000549}
+{"step": 100, "loss": 0.06741032020072453, "acc": 0.9796875, "sem": 0.0, "gnorm": 19.007614135742188, "lr_new": 5.4952276512523136e-05, "mem_gb": 12.303581696, "elapsed": 1102.1644530296326}
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+[eval step 100] macro AUROC=nan  orig=nan transfer=nan q75=nan q40=nan
+{"step": 110, "loss": 0.0581052534536866, "acc": 0.975, "sem": 0.0, "gnorm": 5.1375250816345215, "lr_new": 4.6695470783715024e-05, "mem_gb": 12.303581696, "elapsed": 1240.2486617565155}
+{"step": 120, "loss": 0.043876706575974825, "acc": 0.9890625, "sem": 0.0, "gnorm": 8.352827072143555, "lr_new": 3.852880399766244e-05, "mem_gb": 12.303581696, "elapsed": 1346.935570716858}
+{"step": 130, "loss": 0.05758508000872098, "acc": 0.978125, "sem": 0.0, "gnorm": 1.8924837112426758, "lr_new": 3.067504153537739e-05, "mem_gb": 12.303581696, "elapsed": 1453.4204874038696}
+{"step": 140, "loss": 0.0666888683270372, "acc": 0.98125, "sem": 0.0, "gnorm": 13.848979949951172, "lr_new": 2.3348413563600325e-05, "mem_gb": 12.303581696, "elapsed": 1559.7181305885315}
+{"step": 150, "loss": 0.0316886197146232, "acc": 0.9890625, "sem": 0.0, "gnorm": 1.0823391675949097, "lr_new": 1.6748771394307598e-05, "mem_gb": 12.303581696, "elapsed": 1666.6149408817291}
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+[eval step 150] macro AUROC=nan  orig=nan transfer=nan q75=nan q40=nan
+{"step": 160, "loss": 0.05804034316679463, "acc": 0.975, "sem": 0.0, "gnorm": 5.881022930145264, "lr_new": 1.1056136061894384e-05, "mem_gb": 12.303581696, "elapsed": 1804.2063682079315}
+{"step": 170, "loss": 0.0360621301097126, "acc": 0.9796875, "sem": 0.0, "gnorm": 5.032195091247559, "lr_new": 6.425787818636142e-06, "mem_gb": 12.303581696, "elapsed": 1911.5340042114258}
+{"step": 180, "loss": 0.03635072813995066, "acc": 0.990625, "sem": 0.0, "gnorm": 23.9914608001709, "lr_new": 2.9840304941919415e-06, "mem_gb": 12.303581696, "elapsed": 2017.9297361373901}
+{"step": 190, "loss": 0.03819312109553721, "acc": 0.984375, "sem": 0.0, "gnorm": 34.468223571777344, "lr_new": 8.247462563808817e-07, "mem_gb": 12.303581696, "elapsed": 2124.7438492774963}
+{"step": 200, "loss": 0.015443960205629992, "acc": 0.99375, "sem": 0.0, "gnorm": 2.1267573833465576, "lr_new": 6.834750376549792e-09, "mem_gb": 12.303581696, "elapsed": 2231.1711468696594}
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+/usr/local/lib/python3.12/dist-packages/sklearn/metrics/_ranking.py:1192: UserWarning: No positive class found in y_true, recall is set to one for all thresholds.
+  warnings.warn(
+/root/AIGC-image-detection/Stage2/code/evaluate.py:44: RuntimeWarning: Mean of empty slice
+  return float((s[y == 1] > thr).mean())
+/usr/local/lib/python3.12/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/root/AIGC-image-detection/Stage2/code/evaluate.py:49: RuntimeWarning: Mean of empty slice
+  tpr, tnr = float(pred[y == 1].mean()), float((~pred[y == 0]).mean())
+[eval final step 200] macro AUROC=nan
+best step (-1, None)
+Traceback (most recent call last):
+  File "/root/AIGC-image-detection/Stage2/code/train.py", line 177, in <module>
+  File "/root/AIGC-image-detection/Stage2/code/train.py", line 160, in main
+    
+  File "/usr/local/lib/python3.12/dist-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/root/AIGC-image-detection/Stage2/results/runs/M0/best.pt'

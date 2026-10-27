@@ -1,0 +1,60 @@
+Loading weights:   0%|          | 0/208 [00:00<?, ?it/s]Loading weights:  98%|█████████▊| 203/208 [00:00<00:00, 1968.61it/s]Loading weights: 100%|██████████| 208/208 [00:00<00:00, 2009.14it/s]
+[transformers] [1mSiglipVisionModel LOAD REPORT[0m from: /root/AIGC-image-detection/Stage2/weights/siglip2-base-patch16-256
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+logit_bias                                                   | UNEXPECTED |  | 
+text_model.head.weight                                       | UNEXPECTED |  | 
+text_model.head.bias                                         | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/195 [00:00<?, ?it/s]Loading weights: 100%|██████████| 195/195 [00:00<00:00, 6403.77it/s]
+可训练参数 2.36M，张量 2；示例 ['proj.weight', 'proj.bias']
+有效 batch=16 对（32 视图），步数=150，曝光 2400 个样本对，约 0.83 个 epoch
+{"step": 1, "loss": 1.0346328914165497, "acc": 0.453125, "sem": 0.0, "gnorm": 692.5908813476562, "lr_new": 1.4285714285714285e-05, "mem_gb": 11.43879168, "elapsed": 7.55283260345459}
+{"step": 10, "loss": 0.6773569494485855, "acc": 0.5015625, "sem": 0.0, "gnorm": 59.68260955810547, "lr_new": 9.995174328003631e-05, "mem_gb": 11.590503936, "elapsed": 67.54718255996704}
+{"step": 20, "loss": 0.3961311370134354, "acc": 0.8390625, "sem": 0.0, "gnorm": 79.55543518066406, "lr_new": 9.827251854855991e-05, "mem_gb": 11.590503936, "elapsed": 134.40665769577026}
+{"step": 30, "loss": 0.31217321902513506, "acc": 0.8578125, "sem": 0.0, "gnorm": 39.395565032958984, "lr_new": 9.42728012826605e-05, "mem_gb": 11.590503936, "elapsed": 201.4757263660431}
+{"step": 40, "loss": 0.358624130487442, "acc": 0.834375, "sem": 0.0, "gnorm": 69.624755859375, "lr_new": 8.814486058978035e-05, "mem_gb": 11.720367104, "elapsed": 269.5520534515381}
+{"step": 50, "loss": 0.23700418844819068, "acc": 0.909375, "sem": 0.0, "gnorm": 184.8548583984375, "lr_new": 8.018327071333521e-05, "mem_gb": 11.720367104, "elapsed": 337.85723519325256}
+{"step": 60, "loss": 0.2608239006251097, "acc": 0.871875, "sem": 0.0, "gnorm": 52.29446792602539, "lr_new": 7.077075065009433e-05, "mem_gb": 11.720367104, "elapsed": 405.73085618019104}
+{"step": 70, "loss": 0.25952624157071114, "acc": 0.8890625, "sem": 0.0, "gnorm": 49.7910270690918, "lr_new": 6.035976658979846e-05, "mem_gb": 11.720367104, "elapsed": 473.2846896648407}
+{"step": 80, "loss": 0.2360230028629303, "acc": 0.8890625, "sem": 0.0, "gnorm": 25.37019157409668, "lr_new": 4.945078156015583e-05, "mem_gb": 11.720367104, "elapsed": 540.7062549591064}
+{"step": 90, "loss": 0.18136282730847597, "acc": 0.9359375, "sem": 0.0, "gnorm": 42.8538932800293, "lr_new": 3.8568197831455144e-05, "mem_gb": 11.720367104, "elapsed": 608.1480388641357}
+{"step": 100, "loss": 0.08358362782746553, "acc": 0.9734375, "sem": 0.0, "gnorm": 22.08184242248535, "lr_new": 2.8235148545636776e-05, "mem_gb": 11.720367104, "elapsed": 675.489251613617}
+{"step": 110, "loss": 0.07589147873222828, "acc": 0.9734375, "sem": 0.0, "gnorm": 12.237414360046387, "lr_new": 1.894835035321991e-05, "mem_gb": 11.720367104, "elapsed": 743.285406589508}
+{"step": 120, "loss": 0.08727450938895345, "acc": 0.9640625, "sem": 0.0, "gnorm": 9.6076021194458, "lr_new": 1.1154225908794642e-05, "mem_gb": 11.720367104, "elapsed": 810.8789637088776}
+{"step": 130, "loss": 0.07497996641322971, "acc": 0.9703125, "sem": 0.0, "gnorm": 38.16946029663086, "lr_new": 5.227444032829887e-06, "mem_gb": 11.720367104, "elapsed": 878.4242513179779}
+{"step": 140, "loss": 0.08990683814045042, "acc": 0.9640625, "sem": 0.0, "gnorm": 14.371232032775879, "lr_new": 1.4529091286973995e-06, "mem_gb": 11.720367104, "elapsed": 945.7037749290466}
+{"step": 150, "loss": 0.08814941281452775, "acc": 0.965625, "sem": 0.0, "gnorm": 9.372803688049316, "lr_new": 1.2065635786595586e-08, "mem_gb": 11.720367104, "elapsed": 1018.3559548854828}
+  predict 0/1612  1s
+  predict 640/1612  24s
+  predict 1280/1612  45s
+[final explore] macro AUROC=0.9882
+  condition  n_real  n_fake  auroc     ap  tpr_at_1fpr  tpr_at_5fpr  thr    tpr    fpr   bacc     f1
+0      orig     203     200  0.985  0.985        0.745        0.930  0.0  0.930  0.049  0.940  0.939
+1  transfer     203     200  0.988  0.987        0.770        0.930  0.0  0.950  0.064  0.943  0.943
+2       q75     203     200  0.991  0.991        0.805        0.975  0.0  0.975  0.044  0.965  0.965
+3       q40     203     200  0.989  0.990        0.800        0.965  0.0  0.965  0.054  0.955  0.955

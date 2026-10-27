@@ -1,0 +1,12 @@
+总视图 11888，已有 192，待生成 11696
+Loading weights:   0%|          | 0/1247 [00:00<?, ?it/s]Loading weights:  11%|█         | 131/1247 [00:00<00:00, 1150.26it/s]Loading weights:  20%|█▉        | 247/1247 [00:00<00:00, 1030.59it/s]Loading weights:  28%|██▊       | 351/1247 [00:00<00:01, 778.77it/s] Loading weights:  35%|███▍      | 434/1247 [00:00<00:01, 780.20it/s]Loading weights:  41%|████▏     | 515/1247 [00:00<00:00, 772.66it/s]Loading weights:  74%|███████▍  | 920/1247 [00:00<00:00, 1745.86it/s]Loading weights:  90%|█████████ | 1125/1247 [00:00<00:00, 1829.36it/s]Loading weights: 100%|██████████| 1247/1247 [00:00<00:00, 1439.06it/s]
+1280 / 11696 ('train|real/real_002587|d2', 'the former vice president is seen on a television screen in the senate chamber')
+2560 / 11696 ('train|real/real_004639|d2', 'a young boy with a white eye in front of a field')
+3840 / 11696 ('debug|real/real_006859|d2', 'a woman in a black dress standing in front of a tree')
+5120 / 11696 ('train|real/real_009141|d2', 'a blender filled with sliced cucumbers on a table')
+6400 / 11696 ('train|ai/Medical_&_Public_Health_000163|d2', 'a group of doctors and nurses standing around a patient in a hospital bed')
+7680 / 11696 ('train|ai/Political_&_Social_Events_000288|d2', 'people walking through a narrow alleyway with fruit and vegetables')
+8960 / 11696 ('train|ai/normal_006365|d2', 'a row of white buildings with a pond in the middle')
+10240 / 11696 ('train|ai/normal_008621|d2', 'a long, thin, wooden stick with a gold handle')
+11520 / 11696 ('train|ai/production_000702|d2', 'workers in an industrial factory with machinery')
+完成 11696

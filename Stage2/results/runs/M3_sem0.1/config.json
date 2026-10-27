@@ -1,0 +1,43 @@
+{
+ "args": {
+  "name": "M3_sem0.1",
+  "stage": "B",
+  "lib": true,
+  "lib_kernel": 3,
+  "gsr": true,
+  "gsr_radius": 2,
+  "no_caption": false,
+  "sem": 0.1,
+  "split": "train",
+  "steps": 200,
+  "micro": 4,
+  "accum": 4,
+  "lr_new": 0.0001,
+  "lr_lora": 1e-05,
+  "warmup": 0.05,
+  "init": "results/runs/A_proj/last.pt",
+  "eval_every": 50,
+  "eval_subset": "explore",
+  "eval_n": 150,
+  "seed": 20261027,
+  "aug": "ordinary",
+  "no_ckpt": false,
+  "final_eval": [
+   "explore",
+   "target_dev"
+  ]
+ },
+ "cfg": {
+  "use_lib": true,
+  "lib_kernel": 3,
+  "use_gsr": true,
+  "gsr_radius": 2,
+  "gsr_heads": 8,
+  "lora": true,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "use_caption": true,
+  "sem": true,
+  "grad_ckpt": true
+ }
+}
